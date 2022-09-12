@@ -7,6 +7,8 @@ const startIndex = args[0];
 const endIndex = args[1];
 const CID = args[2];
 
+
+
 const getjson = () => {
     fs.readdir(JsonPath, (err) => {
         if (err) {
@@ -14,9 +16,9 @@ const getjson = () => {
         console.log('Creating Path to Store Jsons...');
       }
       });
-    console.log(`%cFetching ${endIndex} json from ${CID}`, `color: red`);
-    fs.rmSync(JsonPath, { recursive: true, force: true });
-    fs.mkdirSync(`${dir}/jsons`, { recursive: true});
+    console.log(`%cFetching ${endIndex - startIndex} json from ${CID}`, `color: red`);
+    //fs.rmSync(JsonPath, { recursive: true, force: true });
+    //fs.mkdirSync(`${dir}/jsons`, { recursive: true});
     for(let i = startIndex; i <= endIndex; i++) {
     axios.get(`https://sweetsea.mypinata.cloud/ipfs/${CID}/${i}.json`)
   .then(function (response) {
@@ -28,6 +30,10 @@ const getjson = () => {
 }
 };
 
+if (endIndex === "10000") {
+  console.log("You cant pass 10000 as endindex, MAX 9999")
+} else {
+  getjson();
+}
 
-getjson();
 
