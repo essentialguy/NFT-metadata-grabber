@@ -16,7 +16,7 @@ const getjson = () => {
         console.log('Creating Path to Store Jsons...');
       }
       });
-    console.log(`%cFetching ${endIndex - startIndex} json from ${CID}`, `color: red`);
+    console.log(`%cFetching ${endIndex - startIndex + 1} json from ${CID}`, `color: red`);
     //fs.rmSync(JsonPath, { recursive: true, force: true });
     //fs.mkdirSync(`${dir}/jsons`, { recursive: true});
     for(let i = startIndex; i <= endIndex; i++) {

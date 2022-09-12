@@ -4,8 +4,9 @@
 
 ## Getting Started 
 
-a tool to grab nft metadata by passing ipfs cid of metadata
-
+a tool to grab nft metadata by passing ipfs cid of metadata\
+Max json to Download is 1000 per command\
+see the example below
 
 ### Installing
 
