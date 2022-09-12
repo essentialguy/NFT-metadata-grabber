@@ -26,7 +26,6 @@ const getjson = () => {
     console.log(error);
   })
 }
-console.log(`%c${endIndex} json Fetched from ${CID}`, `color: red`);
 };
 
 
